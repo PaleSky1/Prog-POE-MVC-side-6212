@@ -1,0 +1,11 @@
+﻿@model string
+
+<h1>Delete User</h1>
+
+<p>Are you sure you want to delete the user "@Model"?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="username" value="@Model" />
+    <button type="submit">Delete</button>
+    <a asp-action="Index">Cancel</a>
+</form>

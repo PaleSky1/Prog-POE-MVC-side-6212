@@ -1,0 +1,13 @@
+﻿@model ContractClaimSystemMvc.Models.TblClaim
+
+<h2>Are you sure you want to delete this claim?</h2>
+
+<p>Claim ID: @Model.ClaimId</p>
+<p>Hours Worked: @Model.HoursWorked</p>
+<p>Hourly Rate: @Model.HourlyRate</p>
+<p>Total Payment: @Model.TotalPayment</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("ViewClaims")" class="btn btn-secondary">Cancel</a>
+</form>

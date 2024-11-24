@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ContractClaimSystemMvc.Models.TblClaim>
+
+@{
+    ViewData["Title"] = "View Claims";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Claim ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Hours Worked</th>
+            <th scope="col">Hourly Rate</th>
+            <th scope="col">Total Payment</th>
+            <th scope="col">Status</th>
+            <th scope="col">Uploaded File</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.ClaimId</td>
+                <td>@claim.User?.Username ?? "No User" </td>  <!-- Display the Username, handle nulls with the null conditional operator -->
+                <td>@claim.HoursWorked</td>
+                <td>@claim.HourlyRate.ToString("C")</td>  <!-- Format as currency -->
+                <td>@claim.TotalPayment.ToString("C")</td> <!-- Format as currency -->
+                <td>@claim.Status</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(claim.UploadedFile))
+                    {
+                        <a href="@Url.Content(claim.UploadedFile)" target="_blank">Download</a>
+                    }
+                    else
+                    {
+                        <span>No file uploaded</span>
+                    }
+                </td>
+                <td>
+                    <!-- Add any actions like Edit, Delete, etc. -->
+                    <form method="post" action="@Url.Action("Delete", "Claims")">
+                        <input type="hidden" name="claimId" value="@claim.ClaimId" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

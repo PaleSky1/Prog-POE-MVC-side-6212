@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "User Dashboard";
+}
+
+<h2>Welcome to the User Dashboard</h2>
+<p>This is your personalized dashboard with user-specific functions.</p>
+
+<ul>
+    <li><a href="@Url.Action("Create", "Claims")">Make Claim</a></li>
+    <li><a href="@Url.Action("ViewClaims", "Claims")">View Claims</a></li>
+    <li><a href="@Url.Action("Logout", "Account")">Logout</a></li>
+</ul>

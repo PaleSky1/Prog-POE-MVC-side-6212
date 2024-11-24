@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Logan\\source\\repos\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj": {}
+    "C:\\Users\\Logan\\Source\\Repos\\Prog-POE-MVC-side-6212\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Logan\\source\\repos\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj": {
+    "C:\\Users\\Logan\\Source\\Repos\\Prog-POE-MVC-side-6212\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Logan\\source\\repos\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj",
+        "projectUniqueName": "C:\\Users\\Logan\\Source\\Repos\\Prog-POE-MVC-side-6212\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj",
         "projectName": "ContractClaimSystemMvc",
-        "projectPath": "C:\\Users\\Logan\\source\\repos\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj",
+        "projectPath": "C:\\Users\\Logan\\Source\\Repos\\Prog-POE-MVC-side-6212\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\ContractClaimSystemMvc.csproj",
         "packagesPath": "C:\\Users\\Logan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Logan\\source\\repos\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\obj\\",
+        "outputPath": "C:\\Users\\Logan\\Source\\Repos\\Prog-POE-MVC-side-6212\\ContractClaimSystemMvc\\ContractClaimSystemMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Logan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,40 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.9.1, )"
+            },
+            "Microsoft.Azure.Cosmos.Table": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "Microsoft.Bcl.TimeProvider": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.IdentityModel.Abstractions": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "Microsoft.IdentityModel.Logging": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
